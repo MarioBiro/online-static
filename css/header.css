@@ -1,0 +1,41 @@
+/* Header styling */
+
+.container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 170px 750px 700px 170px;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "sd"
+    "ft";
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI';
+    text-align: center;
+    }
+  
+.header h1 {
+  font-size: 35px;
+}
+
+.header ul {
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.header ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.header ul li {
+  display: inline-block;
+  padding: 15px 8px;
+}
+
+.header ul li a:hover {
+  opacity: 1;
+}

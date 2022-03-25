@@ -1,0 +1,609 @@
+html, body{
+  margin: 0;
+}
+
+/* Initial layout for min width 321 px and max width 599 px */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 170px 900px 800px 170px;
+  grid-template-areas: 
+  "hd"
+  "main"
+  "sd"
+  "ft";
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI';
+  text-align: center;
+}
+
+.box {
+  background: #222222;
+  padding: 30px;
+}
+
+/* Header styling */
+
+.header {
+  grid-area: hd;
+  text-align: center;
+  background: black;
+}
+
+.header h1 {
+  font-size: 35px;
+}
+
+.header ul {
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.header ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.header ul li {
+  display: inline-block;
+  padding: 15px 8px;
+}
+
+.header ul li a:hover {
+  opacity: 1;
+}
+
+/* Main content area with latest blog post */
+
+.content {
+  grid-area: main;
+  background: linear-gradient(to bottom, rgb(165, 7, 34), black, black);
+}
+
+.date {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  padding-bottom: 10px;
+  opacity: 70%;
+}
+
+.content h3 {
+  line-height: 0px;
+}
+
+.content1 p {
+    font-size: 17px;
+}
+
+img {
+  width: 100%;
+}
+
+figcaption {
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+
+blockquote {
+  font-size: 12px;
+  font-style: italic;
+  opacity: 80%;
+}
+
+/* Side bar area containing profile card and bio */
+
+.side {
+  grid-area: sd;
+  padding-top: 40px;
+  background: rgb(255, 255, 255);
+  color: black;
+}
+
+.side h4 {
+  font-size: 20px;
+}
+
+.card {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 250px;
+  font-size: 8px;
+  border-radius: 5px;
+  background: rgb(0, 0, 0);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  color: white;
+}
+
+.mini1 {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 2fr;
+  grid-template-rows: 210px;
+  grid-template-areas:
+  "img" 
+}
+
+/* Avatar, modify background url for change */
+
+.mini1-img {
+  grid-area: img;
+  background: linear-gradient(to bottom, transparent, black), url("../../img/avatar.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 15px;
+}
+
+/* About author info  */
+
+.mini2 {
+  display: grid;
+  padding: 8px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 210px;
+  grid-template-areas:
+  "txt";
+  margin-top: 20px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.mini2-txt {
+  list-style-type: none;
+}
+
+/* Bio */
+
+.mini3 {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 210px;
+  grid-template-areas: 
+  "txt";
+  padding: 10px;
+}
+
+.side h5 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.content2 p {
+  font-size: 17px;
+}
+
+/* Footer */
+
+.footer {
+  grid-area: ft;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgb(165, 7, 34), black);
+}
+
+.footer .social {
+  text-align: center;
+  padding-bottom: 7px;
+  color: white;
+}
+
+.footer .social a {
+  font-size: 20px;
+  color: inherit;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 20%;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+
+.footer .social a:hover {
+  opacity: 0.9;
+}
+
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 3;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.footer ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.footer ul li a:hover {
+  opacity: 1;
+}
+
+.footer .copyright {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 9px;
+  color: #aaa;
+}
+
+/* Subscribe button */
+
+.wrapper {
+  height: 30px;
+  width: 100px;
+  display: grid;
+  text-align: center;
+  position: relative;
+  bottom: 30px;
+}
+
+.wrapper .btn-1 {
+  position: absolute;
+  height: 115%;
+  width: 100%;
+  border: 1px solid #ccc;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 35px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 0.75;
+}
+
+#click:checked ~ .btn-1 {
+  height: 40px;
+  width: 60px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wrapper .field {
+  position: relative;
+  height: 100%;
+  width: 0%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s cubic-bezier(1,-0.01,.43,.85);
+}
+
+.wrapper #click {
+  display: none;
+}
+
+#click:checked ~ .field{
+  opacity: 1;
+  width: 100%;
+  pointer-events: auto;
+}
+
+.wrapper .field input {
+  height: 100%;
+  width: 100%;
+  border: 2px solid rgb(83, 83, 83);
+  border-radius: 5px;
+  padding: 0 75px 0 15px;
+  font-size: 15px;
+  outline: none;
+}
+
+.wrapper .field .btn-2 {
+  position: absolute;
+  left: 133px;
+  top: 107%;
+  transform: translateY(-100%);
+  height: 31px;
+  width: 60px;
+  color: rgb(100, 100, 100);
+  background: #000000;
+  border-radius: 5px;
+  line-height: 30px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.btn-2 {
+  opacity: 0.80;
+}
+
+.wrapper .btn-1:hover {
+  opacity: 0.9;
+}
+  
+.wrapper .btn-2:hover {
+  opacity: 0.9;
+}
+
+/* Small screen */ 
+
+@media(max-width:320px) {
+
+  .container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 170px 950px 1000px 220px;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "sd"
+    "ft";
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI';
+    text-align: center;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .header ul {
+    list-style: none;
+    font-size: 14px;
+    line-height: 3;
+    text-align: center;
+    margin-right: 40px;
+  }
+
+  .header ul li {
+    display: inline-block;
+  }
+
+  .content {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .content {
+    grid-area: main;
+    background: linear-gradient(to bottom, rgb(165, 7, 34), black,black, black);
+  }
+
+  figure {
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    width: fit-content;
+    margin: auto;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .date {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding-bottom: 10px;
+    opacity: 70%;
+  }
+
+  .content h2 {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  .content h3 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .content1 p {
+    font-size: 15px;
+    padding: 10px 20px 0 20px;
+    line-height: 1.6;
+  }
+  
+  .side {
+    grid-area: sd;
+    padding-top: 20px;
+    background: rgb(255, 255, 255);
+    color: black;
+  }
+  
+  .side h4 {
+    font-size: 20px;
+  }
+  
+  .card {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px;
+    font-size: 8px;
+    border-radius: 5px;
+    background: rgb(0, 0, 0);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    color: white;
+  }
+  
+  .mini1 {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 2fr;
+    grid-template-rows: 210px;
+    grid-template-areas:
+    "img" 
+  }
+  
+  /* Avatar, modify background url for change */
+  
+  .mini1-img {
+    grid-area: img;
+    background: linear-gradient(to bottom, transparent, black), url("../../img/avatar.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+  }
+  
+  /* About author info  */
+  
+  .mini2 {
+    display: grid;
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 210px;
+    grid-template-areas:
+    "txt";
+    text-align: left;
+    font-size: 12px;
+  }
+  
+  .mini2-txt {
+    margin-top: 60px;
+    list-style-type: none;
+  }
+
+  /* Bio */
+
+  .mini3 h5 {
+    font-size: 14px;
+  }
+
+  .mini3 p {
+    font-size: 17px;
+  }
+  
+  .side h5 {
+    font-size: 26px;
+    margin-bottom: 15px;;
+  }
+  
+  .mini3 {
+    display: grid;
+    padding: 10px;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 210px;
+    grid-template-areas: 
+    "txt";
+  }
+
+  .footer ul {
+    font-size: 12px;
+  }
+  
+  .footer .copyright {
+    font-size: 7px;
+  }
+
+  .wrapper {
+    height: 30px;
+    width: 100px;
+    display: grid;
+    text-align: center;
+    position: relative;
+    bottom: 160px;
+    left: 89px;
+  }
+
+  .social {
+    padding-top: 60px;
+  }
+
+  .footer ul li {
+    padding: 0 8px;
+  }
+}
+
+/* Tablet view */
+
+@media(min-width:600px) and (max-width:900px) {
+
+  .container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 170px 1100px 700px 170px;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "sd"
+    "ft";
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI';
+    text-align: center;
+    }
+
+  .wrapper {
+    height: 30px;
+    width: 100px;
+    display: grid;
+    text-align: center;
+    position: relative;
+    bottom: 110px;
+  }   
+}
+
+/* If Screen Is Wide Enough */
+
+@media(min-width:900px) {
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 170px 1200px 180px;
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd"
+    "main main main main main main sd sd"
+    "ft ft ft ft ft ft ft ft";
+  }
+  
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px;
+    font-size: 8px;
+    background: rgb(0, 0, 0);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+   }
+
+  .header h1 {
+    font-size: 35px;
+    text-align: left;
+    padding-left: 400px;
+  }
+
+  .header ul {
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: right;
+    padding-right: 80px;
+  }
+
+  .footer {
+    padding-right: 390px;
+  }
+
+  .wrapper {
+    height: 30px;
+    width: 100px;
+    display: grid;
+    text-align: center;
+    position: relative;
+    bottom: 110px;
+  }
+  
+  img {
+    width: 83%;
+  }
+}
