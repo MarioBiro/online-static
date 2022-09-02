@@ -20,7 +20,7 @@ html, body{
   "sd"
   "ft";
   color: rgb(255, 255, 255);
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   text-align: center;
 }
 
