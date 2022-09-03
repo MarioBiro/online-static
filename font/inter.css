@@ -6,6 +6,7 @@
   src: url("Inter-Thin.woff2?v=3.19") format("woff2"),
        url("Inter-Thin.woff?v=3.19") format("woff");
 }
+
 @font-face {
   font-family: 'Inter';
   font-style:  italic;
@@ -55,8 +56,11 @@
   font-weight: 400;
   font-display: swap;
   src: url("Inter-Regular.woff2?v=3.19") format("woff2"),
-       url("Inter-Regular.woff?v=3.19") format("woff");
+       url("Inter-Regular.woff?v=3.19") format("woff"),
+       url("Inter-Regular.ttf") format("ttf"),
+       url("Inter-Regular.otf") format("otf");
 }
+
 @font-face {
   font-family: 'Inter';
   font-style:  italic;
