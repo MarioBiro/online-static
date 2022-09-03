@@ -14,7 +14,7 @@ html, body{
   "sd"
   "ft";
   color: rgb(255, 255, 255);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter';
   text-align: center;
 }
 
@@ -246,7 +246,7 @@ blockquote {
     "sd"
     "ft";
     color: rgb(255, 255, 255);
-    font-family: 'Segoe UI';
+    font-family: 'Inter';
     text-align: center;
   }
 
