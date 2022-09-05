@@ -2,12 +2,12 @@ html, body{
   margin: 0;
 }
 
-/* Initial layout for min width 420 px and max width 599 px */
+/* Initial layout for min width 420 px and max width 599 px (Iphone 13 Pro Max) */
 
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 170px 3300px 1300px 220px;
+  grid-template-rows: 150px 3900px 1600px 220px;
   grid-template-areas: 
   "hd"
   "main"
@@ -23,7 +23,7 @@ html, body{
   padding: 30px;
 }
 
-/* Header styling */
+/* Header */
 
 .header {
   grid-area: hd;
@@ -32,13 +32,15 @@ html, body{
 }
 
 .header h1 {
-  font-size: 35px;
+  font-size: 32px;
+  text-decoration-line: underline;
+  text-decoration-thickness: 30px;
 }
 
 .header ul {
   list-style: none;
   font-size: 14px;
-  line-height: 1;
+  line-height: 1.7;
   text-align: center;
   margin-right: 40px;
 }
@@ -58,7 +60,7 @@ html, body{
   opacity: 1;
 }
 
-/* Main content area with latest blog post */
+/* Main content area */
 
 .content {
   grid-area: main;
@@ -67,7 +69,7 @@ html, body{
 
 .date {
   color: rgb(255, 255, 255);
-  font-size: 10px;
+  font-size: 11px;
   padding-bottom: 10px;
   opacity: 70%;
 }
@@ -90,6 +92,7 @@ html, body{
 
 img {
   width: 100%;
+  pointer-events: none;
 }
 
 figure {
@@ -102,15 +105,10 @@ figure {
 
 figcaption {
   color: #fff;
-  font: italic smaller sans-serif;
+  font: italic smaller;
+  font-size: small;
   padding: 10px;
   text-align: center;
-}
-
-.date {
-  color: rgb(255, 255, 255);
-  padding-bottom: 10px;
-  opacity: 70%;
 }
 
 blockquote {
@@ -119,12 +117,22 @@ blockquote {
   opacity: 80%;
 }
 
+/* Details */
+
+.content2 {
+  padding-top: 120px;
+}
+
+.column { 
+  margin-bottom: 120px;
+}
+
 .row3 {
   display: none;
   padding: 0;
 }
 
-/* Side bar area */
+/* Variations */
 
 .side {
   grid-area: sd;
@@ -135,9 +143,8 @@ blockquote {
 
 .side h4 {
   font-size: 20px;
+  margin-top: 100px;
 }
-
-/* Variations */
 
 .side p {
   color: #000000;
@@ -146,6 +153,10 @@ blockquote {
 
 .side figcaption {
   color: #000000;
+}
+
+.side p {
+  margin-bottom: 150px;
 }
 
 /* Footer */
@@ -184,7 +195,7 @@ blockquote {
   margin-top: 0;
   padding: 0;
   list-style: none;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 3;
   margin-bottom: 0;
   text-align: center;
@@ -220,26 +231,14 @@ blockquote {
   padding: 0 8px;
 }
 
-.side figure img {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-
-.side figure:active img {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
-}
-
-/* Small screen phone */ 
+/* Small screen phone (Iphone 13 Mini) */ 
 
 @media(max-width:420px) {
 
   .container {
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 170px 3050px 1200px 220px;
+    grid-template-rows: 150px 3700px 1500px 220px;
     grid-template-areas: 
     "hd"
     "main"
@@ -248,22 +247,6 @@ blockquote {
     color: rgb(255, 255, 255);
     font-family: 'Inter';
     text-align: center;
-  }
-
-  .header h1 {
-    font-size: 30px;
-  }
-
-  .header ul {
-    list-style: none;
-    font-size: 14px;
-    line-height: 3;
-    text-align: center;
-    margin-right: 40px;
-  }
-
-  .header ul li {
-    display: inline-block;
   }
 
   .content {
@@ -281,28 +264,7 @@ blockquote {
   .side h4 {
     font-size: 20px;
   }
-  
-  .card {
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 130px;
-    font-size: 8px;
-    border-radius: 5px;
-    background: rgb(0, 0, 0);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-    text-align: center;
-    color: white;
-  }
-  
-  .mini1 {
-    display: grid;
-    padding: 10px;
-    grid-template-columns: 2fr;
-    grid-template-rows: 210px;
-    grid-template-areas:
-    "img" 
-  }
-  
+   
   .footer ul {
     font-size: 12px;
   }
@@ -310,41 +272,38 @@ blockquote {
   .footer .copyright {
     font-size: 7px;
   }
-
-  .wrapper {
-    height: 30px;
-    width: 100px;
-    display: grid;
-    text-align: center;
-    position: relative;
-    bottom: 160px;
-    left: 89px;
-  }
 }
 
-/* Tablet view */
+/* Tablet view (IPad) */
 
 @media(min-width:600px) and (max-width:900px) {
 
   .container {
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 170px 4000px 1600px 220px;
+    grid-template-rows: 150px 4700px 2000px 220px;
     grid-template-areas: 
     "hd"
     "main"
     "sd"
     "ft";
-    }
-    .social {
-      padding-top: 30px;
-    }
+  }
+    
+  .content img {
+    padding-left: 100px;
+  }
 
-    img {
-      width: 70%;
-      padding-left: 100px;
-    }
+  .column img {
+    padding-right: 100px;
+  }
 
+  img {
+    width: 70%;
+  }
+
+  .social {
+    padding-top: 30px;
+  }
 }
 
 /* Landscape */
@@ -352,65 +311,41 @@ blockquote {
 @media(min-width:900px) and (max-width:1279px) {
 
   .container {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 170px 1300px 180px;
-    grid-template-areas: 
-    "hd hd hd hd hd hd hd hd"
-    "main main main main main main sd sd"
-    "ft ft ft ft ft ft ft ft";
-  }
-  
-  .card {
-    display: grid;
+    display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 250px;
-    font-size: 8px;
-    background: rgb(0, 0, 0);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-    text-align: center;
-   }
-
-  .header h1 {
-    font-size: 35px;
-    text-align: left;
-    padding-left: 280px;
+    grid-template-rows: 150px 5400px 2400px 220px;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "sd"
+    "ft";
+  }
+   
+  .content img {
+    padding-left: 140px;
   }
 
-  .header ul {
-    list-style: none;
-    font-size: 14px;
-    line-height: 1.6;
-    text-align: right;
-    margin-right: 20px;
+  .column img {
+    margin-right: 150px;
   }
 
-  .footer {
-    padding-right: 390px;
-  }
-
-  .wrapper {
-    height: 30px;
-    width: 100px;
-    display: grid;
-    text-align: center;
-    position: relative;
-    bottom: 110px;
-  }
-  
   img {
-    width: 83%;
+    width: 70%;
+  }
+
+  .social {
+    padding-top: 30px;
   }
 }
 
-/* Laptop */
+/* Laptop 15" */
 
 @media(min-width:1280px) and (max-width:1919px){
 
   .container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 140px 1100px 900px 180px;
+    grid-template-rows: 140px 1100px 1000px 180px;
     grid-template-areas: 
     "hd hd hd hd hd hd hd hd"
     "main main main main main main sd sd"
@@ -418,15 +353,7 @@ blockquote {
     "ft ft ft ft ft ft ft ft";
   }
   
-  .card {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 250px;
-    font-size: 8px;
-    background: rgb(0, 0, 0);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-    text-align: center;
-   }
+  /* Header */
 
   .header h1 {
     font-size: 30px;
@@ -440,8 +367,26 @@ blockquote {
     word-spacing: 20px;
     line-height: 0.1;
     text-align: right;
-    padding-right: 15px;
+    padding-right: 10px;
   }
+  
+  /* Main content area */
+
+  .content {
+    grid-area: main;
+    background: linear-gradient(to bottom, rgb(78, 78, 78), black,black, black);
+  }
+
+  .content figure {
+    padding-left: 90px;
+    width: 60%;
+  }
+
+  blockquote {
+    font-size: 13px;
+  }
+  
+/* Details */
 
   .content2 {
     text-align: center;
@@ -452,29 +397,35 @@ blockquote {
   }
 
   .content2 h2 {
-    padding-top: 140px;
+    padding-top: 100px;
     padding-left: 40px;
     color:rgb(0, 0, 0);
   }
-  
-  /* Details */
 
   .row1 {
     display: flex;
+    padding-right: 40px;
   }
 
   .row2 {
     display: none;
   }
+
   .row3 {
     display: flex;
     flex-direction: column;
-    padding-top: 80px;
-    width: 80%;
+    padding-top: 150px;
+    width: 75%;
   }
-  
+
+  .row3 figcaption {
+    color: #000000;
+    font-size: 12px;
+  }
+
   .column {
     flex: 50%;
+    margin-bottom: 0px;
   }
 
   .column figcaption {
@@ -486,31 +437,8 @@ blockquote {
     color:rgb(0, 0, 0) 
   }
 
-  
-.content figure {
-  padding-left: 50px;
-  width: 60%;
-}
+  /* Variations */
 
-.side img {
-  padding-left: 30px;
-}
-
-.content {
-  grid-area: main;
-  background: linear-gradient(to bottom, rgb(78, 78, 78), black,black, black);
-}
-
-  /* Footer */
-
-  .footer {
-    background: linear-gradient(to bottom, rgb(106, 106, 106), black);
-  }
-
-  .social {
-    padding-top: 20px;
-  }
- 
   img {
     width: 83%;
   }
@@ -526,70 +454,120 @@ blockquote {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
   }
+
+  .side {
+    padding-top: 80px;
+  }
+
+  .side h4 {
+    margin-top: 0px;
+  }
+
+  .side p {
+    margin-bottom: 60px;
+  }
+
+  .side img {
+    padding-left: 10px;
+  }
+  
+  /* Footer */
+
+  .footer {
+    background: linear-gradient(to bottom, rgb(106, 106, 106), black);
+  }
+
+  .social {
+    padding-top: 20px;
+  }
 }
 
 /* HD TV 1080*/
 
 @media(min-width:1920px) and (max-width:3839px){
+
   .container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 170px 1400px 1100px 180px;
+    grid-template-rows: 170px 1600px 1500px 180px;
     grid-template-areas: 
     "hd hd hd hd hd hd hd hd"
     "main main main main main main sd sd"
     "ds ds ds ds ds ds rt rt "
     "ft ft ft ft ft ft ft ft";
   }
-  
-  .card {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 250px;
-    font-size: 8px;
-    background: rgb(0, 0, 0);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-    text-align: center;
-   }
 
+  /* Header */
+  
   .header h1 {
     font-size: 35px;
     text-align: left;
     padding-left: 600px;
   }
 
-  .content h2 {
-    font-size: 20px;
-  }
-
   .header ul {
     list-style: none;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
     word-spacing: 20px;
     text-align: right;
-    padding-right: 50px;
+    padding-right: 40px;
+  }
+  
+  /* Main content area */
+
+  .content {
+    grid-area: main;
+    background: linear-gradient(to bottom, rgb(78, 78, 78), black,black, black);
+  }
+
+  .content h2 {
+    font-size: 23px;
   }
 
   .date {
-    font-size: 15px;
+    font-size: 18px;
   }
+
+  .content p {
+    font-size: 20px;
+  }
+
+  .content figure {
+    padding-left: 100px;
+    width: 60%;
+  }
+
+  blockquote {
+    font-size: 18px;
+  }
+
+  /* Details */
+
+  .side2 {
+    grid-area: rt;
+    color:rgb(0, 0, 0) 
+  }
+
+  img {
+    width: 83%;
+  }
+
   .content2 {
     text-align: center;
   }
 
-  .content2 img{
+  .content2 img {
     width: 90%;
   }
 
   .content2 h2 {
-    padding-top: 280px;
-    padding-left: 40px;
+    padding-top: 480px;
+    padding-left: 84px;
     color:rgb(0, 0, 0);
+    font-size: 28px;
   }
   
-  /* Details */
-
   .row1 {
     display: flex;
   }
@@ -597,40 +575,43 @@ blockquote {
   .row2 {
     display: none;
   }
+
+  .row1 figcaption {
+    color: #000000;
+    font-size: 22px;
+  }
+
+  .row3 figcaption {
+    color: #000000;
+    font-size: 18px;
+  }
+
   .row3 {
     display: flex;
     flex-direction: column;
-    padding-top: 120px;
+    padding-top: 300px;
     width: 80%;
   }
-  
-  .column {
+
+  .column { 
     flex: 50%;
+    margin-bottom: 20px;
   }
 
-  .column figcaption {
-    color: #000000;
-  }
-
-  .side2 {
-    grid-area: rt;
-    color:rgb(0, 0, 0) 
-  }
-
+  /* Variations */
   
-.content figure {
-  padding-left: 50px;
-  width: 60%;
-}
+  .side h4 {
+    font-size: 30px;
+    margin-top: 100px;
+  }
 
-.side img {
-  padding-left: 30px;
-}
-
-.content {
-  grid-area: main;
-  background: linear-gradient(to bottom, rgb(78, 78, 78), black,black, black);
-}
+  .side figcaption {
+    font-size: 18px;
+  }
+  
+  .side p {
+    font-size: 16px;
+  }
 
   /* Footer */
 
@@ -641,28 +622,16 @@ blockquote {
   .social {
     padding-top: 20px;
   }
-
-  .wrapper {
-    height: 30px;
-    width: 100px;
-    display: grid;
-    text-align: center;
-    position: relative;
-    bottom: 110px;
-  }
-  
-  img {
-    width: 83%;
-  }
 }
 
 /* HD TV 4K */
 
 @media(min-width:3840px){
+
   .container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 250px 2800px 2700px 280px;
+    grid-template-rows: 300px 3200px 2700px 24m0px;
     grid-template-areas: 
     "hd hd hd hd hd hd hd hd"
     "main main main main main main sd sd"
@@ -670,21 +639,36 @@ blockquote {
     "ft ft ft ft ft ft ft ft";
   }
   
-  .card {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 250px;
-    font-size: 8px;
-    background: rgb(0, 0, 0);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-    text-align: center;
-   }
+  /* Header */
 
   .header h1 {
     padding-top: 20px;
-    font-size: 55px;
+    font-size: 70px;
     text-align: left;
-    padding-left: 1250px;
+    padding-left: 1230px;
+    line-height: 1;
+  }
+
+  .header ul {
+    list-style: none;
+    font-size: 42px;
+    line-height: 0.1;
+    word-spacing: 40px;
+    text-align: right;
+    padding-right: 150px;
+    margin-top: 85px;
+  }
+
+  /* Main content area */
+
+  .content {
+    grid-area: main;
+    background: linear-gradient(to bottom, rgb(78, 78, 78), black,black, black);
+  }
+
+  .content figure {
+    padding-left: 250px;
+    width: 60%;
   }
 
   .content h2 {
@@ -699,19 +683,21 @@ blockquote {
     font-size: 35px;
   }
 
-  .header ul {
-    list-style: none;
-    font-size: 42px;
-    line-height: 0.1;
-    word-spacing: 40px;
-    text-align: right;
-    padding-right: 160px;
-    margin-top: 20px;
-  }
-
   .date {
     font-size: 35px;
   }
+ 
+  /* Details */
+
+  .side2 {
+    grid-area: rt;
+    color:rgb(0, 0, 0) 
+  }
+
+  .side2 figcaption {
+    font-size: 40px;
+  }
+
   .content2 {
     text-align: center;
   }
@@ -721,12 +707,14 @@ blockquote {
   }
 
   .content2 h2 {
-    padding-top: 580px;
-    padding-left: 40px;
+    padding-top: 950px;
+    padding-left: 220px;
     color:rgb(0, 0, 0);
   }
-  
-  /* Details */
+
+  .content2 figcaption {
+    font-size: 40px;
+  }
 
   .row1 {
     display: flex;
@@ -735,6 +723,7 @@ blockquote {
   .row2 {
     display: none;
   }
+
   .row3 {
     display: flex;
     flex-direction: column;
@@ -742,51 +731,37 @@ blockquote {
     width: 80%;
   }
   
+  .row3 figcaption {
+    font-size: 34px;
+  }
+  
   .column {
     flex: 50%;
+    margin-bottom: 50px;
   }
 
   .column figcaption {
     color: #000000;
   }
 
-  .side2 {
-    grid-area: rt;
-    color:rgb(0, 0, 0) 
+  /* Variations */
+
+  img {
+    width: 83%;
   }
 
+  .side h4 {
+    font-size: 50px;
+  }
+
+  .side figcaption {
+    font-size: 40px;
+  }
   
-.content figure {
-  padding-left: 50px;
-  width: 60%;
-}
-
-.side img {
-  padding-left: 70px;
-}
-
-.content {
-  grid-area: main;
-  background: linear-gradient(to bottom, rgb(78, 78, 78), black,black, black);
-}
-
-.side h4 {
-  font-size: 40px;
-}
-
-.side figcaption {
-  font-size: 40px;
-}
-.side2 figcaption {
-  font-size: 40px;
-}
-
-.content2 figcaption {
-  font-size: 40px;
-}
-.side p {
-  font-size: 30px;
-}
+  .side p {
+    font-size: 35px;
+    margin-bottom: 400px;
+  }
 
   /* Footer */
 
@@ -797,9 +772,5 @@ blockquote {
 
   .social {
     padding-top: 20px;
-  }
-  
-  img {
-    width: 83%;
   }
 }
